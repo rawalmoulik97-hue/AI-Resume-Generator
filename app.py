@@ -126,7 +126,7 @@ if st.button("Genearate Resume"):
     code = response['messages'][-1].content[-1]['text']
 
     # st.markdown(code)
-    st.html(code, width="strech", unsafe_allow_javascript=True)
+    st.html(code, width="stretch", unsafe_allow_javascript=True)
 
 
 
