@@ -8,10 +8,10 @@ st.markdown("""##User can create or download AI created Resume based on High ATS
 
 #====================AI AGENT ===========================
 
-import IPython as ip
 import os
 import test
 import langchain
+import IPython as ip
 from langchain.agents import create_agent
 from langchain_groq import ChatGroq
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -80,9 +80,9 @@ def prompt_generator(agent):
   with open(file_name, 'w') as f:
     f.write(response.content[-1]['text'])
   return "Prompt file generated Successfully, agent can read it"
+prompt_generator(model)
 
   
-
 # TOOL 2:
 
 def resume_maker_prompt():
@@ -91,6 +91,8 @@ def resume_maker_prompt():
   with open('prompt.py','r') as f:
     prompt = f.read()
   return prompt
+
+resume_maker_prompt()
 
 
 # ==============================GENEERATE RESUME ===========================
@@ -124,8 +126,8 @@ if st.button("Genearate Resume"):
     response = agent.invoke({'messages':[{'role':'user','content': query}]})
     code = response['messages'][-1].content[-1]['text']
 
-    st.markdown(code)
-
+    # st.markdown(code)
+    st.html(code, width="strech", unsafe_allow_javascript=True)
 
 
 
