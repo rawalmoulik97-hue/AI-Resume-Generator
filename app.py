@@ -11,7 +11,6 @@ st.markdown("""##User can create or download AI created Resume based on High ATS
 import os
 import test
 import langchain
-import IPython as ip
 from langchain.agents import create_agent
 from langchain_groq import ChatGroq
 from langchain_google_genai import ChatGoogleGenerativeAI
