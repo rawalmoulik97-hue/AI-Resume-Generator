@@ -113,7 +113,7 @@ if uploaded_file is not None:
 
           if image.mode in ("RGBA" , "P"):
               image = image.convert("RGB")
-          base_name = os.path.splitext)uploaded_file.name)[0]
+          base_name = os.path.splitext(uploaded_file.name)[0]
           save_path = f"{base_name}.jpg"
           
           # 3. Save the image to the current working directory
