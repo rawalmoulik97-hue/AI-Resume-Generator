@@ -139,7 +139,7 @@ if st.button('generate resume'):
         data_uri = f"data:image/jpeg;base64,{b64_image}"
         code = code.replace("PROFILE_IMAGE_PLACEHOLDER", data_uri)
     st.divider()
-    response = agent.invoke({'messages':[{'role','user','content': job_prompt}]})
+    response = agent.invoke({'messages':[{'role','user','content':job_prompt}]})
 
     job_code = response['messages'][-1].content[-1]['text']
     st.html(job_code, width="stretch" , unsafe_allow_javascript=True)
