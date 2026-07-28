@@ -116,7 +116,7 @@ import base64
 OPTIONS = ["Delhi","Noida","gurugram","Ujjain","Greater Kailash","Jharkhand","Banglore","Kanpur"]
 LOCATION = st.sidebar.multiselect('SELECT LOCATION: ',
                                   options = OPTIONS )
-JOB_PROFILE = ["Python Developer", "GEN AI","Full Stack Developer","DATA ANALYIS]
+JOB_PROFILE = ["Python Developer", "GEN AI","Full Stack Developer","DATA ANALYIS"]
 
 PROFILE = st.sidebar.multiselect("SELECT JOB ROLE", options = JOB_PROFILE) 
 
