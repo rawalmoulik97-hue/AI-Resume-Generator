@@ -109,7 +109,7 @@ if uploaded_file is not None:
      try:
           image = Image.open(uploaded_file)
 
-          st.sidebar.image(image, caption = "UPLOADED IMAGE , use_container_width=True)
+          st.sidebar.image(image, caption = "UPLOADED IMAGE" , use_container_width=True)
 
           if image.mode in ("RGBA" , "P"):
               image = image.convert("RGB")
