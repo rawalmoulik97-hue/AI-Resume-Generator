@@ -128,7 +128,4 @@ if st.button('generate resume'):
         code = code.replace("PROFILE_IMAGE_PLACEHOLDER", data_uri)
 
       
-    response = agent.invoke({'messages': [{'role':'user','content':query}]})
-    code=response['messages'][-1].content[-1]['text']
-    #st.markdown(code)
     st.html(code , width="stretch" , unsafe_allow_javascript=True)
