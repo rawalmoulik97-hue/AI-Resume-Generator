@@ -128,7 +128,7 @@ and give result like naukri theme design with job name , job description , salar
 
 
 if st.button('generate resume'):
-  with st.spinner("runnign agent"):
+  with st.spinner("running agent"):
 
     response = agent.invoke({'messages': [{'role':'user','content':query}]})
     print(response['messages'][-1].content)
